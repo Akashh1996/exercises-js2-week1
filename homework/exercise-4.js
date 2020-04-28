@@ -60,13 +60,34 @@ var restaurantFinderApplication = {
     applicationVersion: "1.0",
     restaurants: restaurants,
     findAvailableRestaurants: function(numberOfPeople) {
-        // Complete here
+       let x = []
+       for (let index = 0; index < this.restaurants.length; index++) {
+           if((this.restaurants[index].totalSeats - this.restaurants[index].numberOfCustomers) >= numberOfPeople ){
+               x.push(this.restaurants[index].name)
+           }
+           
+       }
+       return x
     },
     findRestaurantServingDish: function(dishName) {
-        // Complete here
+        let x = []
+        for (let index = 0; index < this.restaurants.length; index++) {
+            if(this.restaurants[index].menu.includes(dishName)){
+                x.push(this.restaurants[index].name)
+            }
+            
+        }
+        return x
     },
     countNumberOfRestaurantsInArea: function(area) {
-        // Complete here
+        let x = []
+        for (let index = 0; index < this.restaurants.length; index++) {
+            if(this.restaurants[index].address["area"] === area){
+                x.push(this.restaurants[index].name)
+            }
+            
+        }
+        return x.length
     }
 };
 
