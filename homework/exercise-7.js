@@ -42,3 +42,18 @@ var writers = [
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */
+for (let index = 0; index < writers.length; index++) {
+  let writer = writers[index]
+    console.log(`Hi my name is ${writer.firstName} ${writer.lastName} and im ${writer.age} years old`);
+  
+  
+}
+
+for (let index = 0; index < writers.length; index++) {
+  let writer = writers[index]
+    if(writer.alive){
+      console.log(writer.firstName);
+      
+    }
+  
+}
