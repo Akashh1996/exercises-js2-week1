@@ -17,3 +17,17 @@ var car = {
 
 */
 
+var user = {
+    name: "akash",
+    age: 45,
+    isHandsome: true,
+    handsome : function hans(){
+        if(this.isHandsome){
+             return user
+        }else {
+            return user.upgrade = "making handsome"
+        }
+    }
+}
+user.handsome()
+console.log(user);
